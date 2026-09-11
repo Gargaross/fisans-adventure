@@ -1,0 +1,280 @@
+[gd_scene load_steps=38 format=3]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/kian/Spritesheets/idle_spritesheet.png" id="3_idle"]
+[ext_resource type="Texture2D" path="res://assets/kian/Spritesheets/running_spritesheet.png" id="4_run"]
+[ext_resource type="Texture2D" path="res://assets/kian/Spritesheets/jump_spritesheet.png" id="5_jump"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_1"]
+atlas = ExtResource("3_idle")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_2"]
+atlas = ExtResource("3_idle")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_3"]
+atlas = ExtResource("3_idle")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_4"]
+atlas = ExtResource("3_idle")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_5"]
+atlas = ExtResource("3_idle")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_6"]
+atlas = ExtResource("3_idle")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_7"]
+atlas = ExtResource("3_idle")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_8"]
+atlas = ExtResource("3_idle")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_9"]
+atlas = ExtResource("3_idle")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idle_10"]
+atlas = ExtResource("3_idle")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_1"]
+atlas = ExtResource("4_run")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_2"]
+atlas = ExtResource("4_run")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_3"]
+atlas = ExtResource("4_run")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_4"]
+atlas = ExtResource("4_run")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_5"]
+atlas = ExtResource("4_run")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_6"]
+atlas = ExtResource("4_run")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_7"]
+atlas = ExtResource("4_run")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_8"]
+atlas = ExtResource("4_run")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_9"]
+atlas = ExtResource("4_run")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_run_10"]
+atlas = ExtResource("4_run")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_1"]
+atlas = ExtResource("5_jump")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_2"]
+atlas = ExtResource("5_jump")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_3"]
+atlas = ExtResource("5_jump")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_4"]
+atlas = ExtResource("5_jump")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_5"]
+atlas = ExtResource("5_jump")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_6"]
+atlas = ExtResource("5_jump")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_7"]
+atlas = ExtResource("5_jump")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_8"]
+atlas = ExtResource("5_jump")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_9"]
+atlas = ExtResource("5_jump")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jump_10"]
+atlas = ExtResource("5_jump")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_9")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idle_10")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+},
+{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_9")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_run_10")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+},
+{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_9")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jump_10")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+offset = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_1")
+animation = &"idle"
+autoplay = "idle"
