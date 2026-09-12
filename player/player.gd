@@ -1,33 +1,43 @@
 extends CharacterBody2D
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
-
-var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+const ARRIVE_DISTANCE = 4.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity.y += gravity * delta
+var target_position: Vector2
+var moving: bool = false
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+func _ready() -> void:
+	target_position = global_position
 
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * SPEED
-		sprite.flip_h = direction < 0
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_set_target(_to_world(event.position))
+	elif event is InputEventScreenTouch and event.pressed:
+		_set_target(_to_world(event.position))
+
+func _to_world(viewport_point: Vector2) -> Vector2:
+	return get_viewport().get_canvas_transform().affine_inverse() * viewport_point
+
+func _set_target(point: Vector2) -> void:
+	target_position = point
+	moving = true
+
+func _physics_process(_delta: float) -> void:
+	if moving:
+		var to_target := target_position - global_position
+		if to_target.length() <= ARRIVE_DISTANCE:
+			moving = false
+			velocity = Vector2.ZERO
+		else:
+			velocity = to_target.normalized() * SPEED
+			sprite.flip_h = to_target.x < 0
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity = Vector2.ZERO
 
 	move_and_slide()
-	update_animation(direction)
+	_update_animation()
 
-func update_animation(direction: float) -> void:
-	if not is_on_floor():
-		sprite.play("jump")
-	elif direction:
-		sprite.play("run")
-	else:
-		sprite.play("idle")
+func _update_animation() -> void:
+	sprite.play("run" if moving else "idle")
