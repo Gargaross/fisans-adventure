@@ -141,9 +141,8 @@ Everything below is still open:
 
 - ✅ Engine: Godot 4.7, `Mobile` feature set already configured
   (`project.godot`).
-- 🔍 The project's internal name is still the placeholder `"Wild Runner"` in
-  `project.godot` — should be renamed to match the actual title once one is
-  finalized.
+- ✅ The project's internal name in `project.godot` now matches the working
+  title, `"Fisans Äventyr"`.
 - ✅ **Export targets:** Android only, for now — matches the tablet/touch
   decision and the existing "Setup Google Play account" TODO. Revisit
   iOS/other platforms later if wanted.
