@@ -2,4 +2,5 @@
 
 - [ ] Setup Google Play account
 - [ ] Setup CI workflow
-- [ ] Write game design document
+- [x] Write game design document (see [docs/GDD.md](docs/GDD.md) — living draft, open questions tracked inside)
+- [ ] Story brainstorm: what Santa has lost/broken, cast of characters, scene count, tone (see [docs/GDD.md](docs/GDD.md) §3)
