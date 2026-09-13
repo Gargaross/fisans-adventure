@@ -106,6 +106,11 @@ Everything below is still open:
   scene — not a straight launch-into-scene, but not a full menu either.
 - ✅ Parent-exit mechanism: none in-game — rely on the device's own
   home/back button/gesture, kept out of the child's way entirely.
+- ✅ **Aspect handling:** letterbox/pillarbox (black bars) on screens that
+  aren't 4:3, rather than expanding the viewport to reveal extra
+  background. Keeps every background composition fully framed as
+  authored, with no crop/reveal margin to design around. Set via
+  `window/stretch/aspect="keep"` in `project.godot`.
 
 ---
 
@@ -240,3 +245,4 @@ Consolidated from above — resolve these before/while building the slice:
 | 2026-09-12 | Placeholder audio acceptable for v1 | Real narration/music is a follow-up pass |
 | 2026-09-12 | "Done" = checklist only, no playtest gate | Playtesting with her is a later stage |
 | 2026-09-12 | Scene size: 3-5 interactive hotspots | |
+| 2026-09-13 | Aspect handling: letterbox/pillarbox (black bars), not expand | Keeps backgrounds fully framed as authored on non-4:3 screens |
