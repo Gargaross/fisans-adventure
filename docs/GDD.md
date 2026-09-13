@@ -122,6 +122,10 @@ Everything below is still open:
 - 🔍 Color palette / mood boards — depends on visual style above.
 - 🔍 Character design for Santa and any other cast members — depends on
   visual style above.
+- 🔍 Main character sprite sheet — a single sheet with all her animation
+  frames (idle, walk, and whatever interaction/talk animations the point-
+  and-click model needs) for use in an `AnimatedSprite2D`. Depends on
+  visual style above; not started.
 
 ---
 
